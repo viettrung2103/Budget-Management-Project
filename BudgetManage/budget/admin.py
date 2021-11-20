@@ -1,5 +1,5 @@
 from django.contrib import admin
-from budget.models import Method
+from budget.models import SavingMethod
 
 # Register your models here.
-admin.site.register(Method)
+admin.site.register(SavingMethod)

@@ -16,15 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-
-
 from budget.views import(
-    MethodListView, MethodCreateView
+    MethodListView, MethodCreateView,
 )
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/',base, name='index'),
-    path('budget/methods/create/', MethodCreateview.as_view(),name='method_create'),
+    path('budget/methods/create/', MethodCreateView.as_view(), name='method_create'),
     path('budget/methods/list/', MethodListView.as_view(), name='method_list'),
 ]

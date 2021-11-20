@@ -2,14 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5da8658d-b6e9-43e3-be78-88dd9c54ddad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BudgetManage/budget/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetManage/budget/template/methods/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetManage/budget/template/methods/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetManage/budget/template/sucess.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetManage/budget/templates/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetManage/BudgetManage/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/BudgetManage/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BudgetManage/BudgetManage/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/BudgetManage/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetManage/budget/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/budget/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetManage/budget/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/budget/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetManage/budget/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/budget/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetManage/budget/template/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/budget/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetManage/budget/template/methods/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/budget/templates/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetManage/budget/template/methods/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetManage/budget/template/sucess.html" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/budget/templates/sucess.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetManage/budget/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/budget/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetManage/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +30,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="20tsWXmeUfAKOjIVHR8cCcaiftf" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -44,6 +56,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Backend Technology" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\sda\lesson\Budget Management Project\BudgetManage\budget\templates" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="manage" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
