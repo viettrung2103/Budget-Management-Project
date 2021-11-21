@@ -2,10 +2,13 @@
 {% block content %}
   <h1>Welcome to Budget Plan!</h1>
   <ul>
-    {% for category in category_list %}
+    {% for spending in spending_list %}
       <li>
-        {{ category.pk }}
-        {{ category.name }}
+
+        {{ spending.pk }}
+        {{ spending.name }}
+        {{ spending.amount }}
+
       </li>
     {% endfor %}
   </ul>

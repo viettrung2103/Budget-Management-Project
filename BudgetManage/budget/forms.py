@@ -1,11 +1,11 @@
 
 from django.core.exceptions import ValidationError
 from django.forms import(
-    CharField, ModelForm,DateField
+    CharField, ModelForm,DateField,DecimalField
 )
 from budget.models import SavingMethod, Category, SpendingType, Spending
 
-from datetime import date
+from datetime import date,datetime
 
 class MethodForm(ModelForm):
 
@@ -46,13 +46,13 @@ class SpendingTypeForm(ModelForm):
 
 class PastandNowField(DateField):
     def validate(self, value):
-        initial = super().validate(value)
-        if initial > date.xtoday():
+        super().validate(value)
+        if value > date.today():
             raise ValidationError("No Future dates allowed!")
 
     def clean(self,value):
         result = super().clean(value)
-        return date(date=result.date,month=result.month,year=result.year)
+        return date(year=result.year,month=result.month,day=result.day)
 
 class SpendingForm(ModelForm):
     class Meta:
@@ -60,5 +60,7 @@ class SpendingForm(ModelForm):
         fields = '__all__'
 
     date = PastandNowField()
+    amount = DecimalField(min_value=0)
+
 
 

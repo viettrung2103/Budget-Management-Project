@@ -52,7 +52,23 @@ class CategoryUpdateView(UpdateView):
     success_url = reverse_lazy("category_list")
 
 #CRUD for Spending:
-class Spending(CreateView):
+class SpendingCreateView(CreateView):
     template_name = "spendings/create.html"
     form_class = SpendingForm
     success_url = reverse_lazy('success')
+
+class SpendingListView(ListView):
+    template_name = "spendings/list.html"
+    model = Spending
+    context_object_name = 'spending_list'
+
+class SpendingUpdateView(UpdateView):
+    template_name = "spendings/create.html"
+    model = Spending
+    form_class = SpendingForm
+    success_url = reverse_lazy("spending_list")
+
+class SpendingDeleteView(DeleteView):
+    template_name = 'spending/confirm_delete.html'
+    model = Spending
+    success_url = reverse_lazy('spending_list')
