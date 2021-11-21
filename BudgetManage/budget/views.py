@@ -3,9 +3,9 @@ from django.http import HttpResponse
 from django.urls import reverse_lazy
 from django.views.generic import CreateView,ListView,UpdateView,DetailView,DeleteView
 
-from budget.forms import MethodForm, CategoryForm
+from budget.forms import MethodForm, CategoryForm, SpendingForm
 
-from budget.models import SavingMethod, Category
+from budget.models import SavingMethod, Category, Spending
 
 from logging import getLogger
 
@@ -44,3 +44,15 @@ class CategoryDeleteView(DeleteView):
     template_name = 'categories/confirm_delete.html'
     model = Category
     success_url = reverse_lazy('category_list')
+
+class CategoryUpdateView(UpdateView):
+    template_name = "categories/create.html"
+    model = Category
+    form_class = CategoryForm
+    success_url = reverse_lazy("category_list")
+
+#CRUD for Spending:
+class Spending(CreateView):
+    template_name = "spendings/create.html"
+    form_class = SpendingForm
+    success_url = reverse_lazy('success')
