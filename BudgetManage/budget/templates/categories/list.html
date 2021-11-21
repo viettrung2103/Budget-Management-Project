@@ -2,9 +2,9 @@
 {% block content %}
   <h1>Welcome to Budget Plan!</h1>
   <ul>
-    {% for method in method_list %}
+    {% for category in category_list %}
       <li>
-        {{ method.name }}
+        {{ category.name }}
       </li>
     {% endfor %}
   </ul>

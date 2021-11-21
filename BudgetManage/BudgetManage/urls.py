@@ -18,7 +18,7 @@ from django.urls import path
 from django.views.generic import TemplateView
 
 from budget.views import(
-    MethodListView, MethodCreateView, CategoryCreateView
+    MethodListView, MethodCreateView, CategoryCreateView, CategoryListView, CategoryDeleteView,
 )
 
 urlpatterns = [
@@ -28,7 +28,9 @@ urlpatterns = [
     path('budget/methods/create/', MethodCreateView.as_view(), name='method_create'),
     path('budget/methods/list/', MethodListView.as_view(), name='method_list'),
     #categories
-    path('budget/category/create', CategoryCreateView.as_view(), name='category_list'),
+    path('budget/category/create/', CategoryCreateView.as_view(), name='category_create'),
+    path('budget/category/list/', CategoryListView.as_view(), name='category_list'),
+    path('budget/category/delete/<pk>/', CategoryDeleteView.as_view(), name='category_list'),
 
-    path('success',TemplateView.as_view(template_name='success.html'), name='success'),
+    path('success/',TemplateView.as_view(template_name='success.html'), name='success'),
 ]

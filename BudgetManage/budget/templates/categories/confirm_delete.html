@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <form method="post">
+    {% csrf_token %}
+    <p>
+      Are you sure you want to delete category "{{ object.name }}" from database?
+    </p>
+    <input type="submit" value="Submit" class="btn btn-danger">
+  </form>
+{% endblock %}

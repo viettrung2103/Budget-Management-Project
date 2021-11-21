@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.urls import reverse_lazy
-from django.views.generic import CreateView,ListView,UpdateView,DetailView
+from django.views.generic import CreateView,ListView,UpdateView,DetailView,DeleteView
 
 from budget.forms import MethodForm, CategoryForm
 
@@ -34,3 +34,13 @@ class CategoryCreateView(CreateView):
     template_name = "categories/create.html"
     form_class = CategoryForm
     success_url = reverse_lazy('success')
+
+class CategoryListView(ListView):
+    template_name = "categories/list.html"
+    model = Category
+    context_object_name = "category_list"
+
+class CategoryDeleteView(DeleteView):
+    template_name = 'categories/confirm_delete.html'
+    model = Category
+    success_url = reverse_lazy('category_list')
