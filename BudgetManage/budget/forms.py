@@ -3,7 +3,7 @@ from django.core.exceptions import ValidationError
 from django.forms import(
     CharField, ModelForm
 )
-from budget.models import SavingMethod
+from budget.models import SavingMethod, Category
 
 
 class MethodForm(ModelForm):
@@ -15,6 +15,18 @@ class MethodForm(ModelForm):
     #Force the first letter of the name to be capitalized
     def clean_name(self):
         initial = self.cleaned_data('name')
+        if initial == '':
+            raise ValidationError("You cannot add empty method")
+        return initial.capitalize()
+
+class CategoryForm(ModelForm):
+    class Meta:
+        model = Category
+        fields = '__all__'
+
+    # Force the first letter of the name to be capitalized
+    def clean_name(self):
+        initial = self.cleaned_data['name']
         if initial == '':
             raise ValidationError("You cannot add empty method")
         return initial.capitalize()

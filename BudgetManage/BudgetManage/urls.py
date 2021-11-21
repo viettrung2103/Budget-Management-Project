@@ -15,13 +15,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.views.generic import TemplateView
 
 from budget.views import(
-    MethodListView, MethodCreateView,
+    MethodListView, MethodCreateView, CategoryCreateView
 )
 
 urlpatterns = [
+    #admin
     path('admin/', admin.site.urls),
+    #savingmethod
     path('budget/methods/create/', MethodCreateView.as_view(), name='method_create'),
     path('budget/methods/list/', MethodListView.as_view(), name='method_list'),
+    #categories
+    path('budget/category/create', CategoryCreateView.as_view(), name='category_list'),
+
+    path('success',TemplateView.as_view(template_name='success.html'), name='success'),
 ]
