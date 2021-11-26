@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>{% extends "base.html" %}
+{% block content %}
+  <h1>Welcome to Budget Plan!</h1>
+  <ul>
+  <li>Summary</li>
+  <li>Total Income</li>
+      <li>{{ total_incomes }}</li>
+
+  <li>Total Expense</li>
+      <li>{{ total_expenses }}</li>
+
+      <li>Saving</li>
+      <li>{{ saving }}</li>
+
+
+
+  </ul>
+{% endblock %}

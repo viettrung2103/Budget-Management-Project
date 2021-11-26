@@ -8,8 +8,27 @@
         {{ spending.pk }}
         {{ spending.name }}
         {{ spending.amount }}
+        {{ spending.date }}
+
 
       </li>
     {% endfor %}
+  </ul>
+  <ul>
+    <li>
+      Total spending is
+
+    </li>
+    <li>
+      {% for spending in spending_list %}
+      {{ sum = 0 }}
+        {% if spending.spending_type == 'income': %}
+          {% sum += spending.amount %}
+        {% else: %}
+          {% sum -= spending.amount %}
+        {% endif %}
+        {% print(sum) %}
+      {% endfor %}
+    </li>
   </ul>
 {% endblock %}
