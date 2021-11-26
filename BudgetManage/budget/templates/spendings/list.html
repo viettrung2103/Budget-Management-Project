@@ -9,10 +9,17 @@
         {{ spending.name }}
         {{ spending.amount }}
         {{ spending.date }}
+        {{ spending.spendingtype }}
+
       </li>
     {% endfor %}
-          Total expense is {{ total_expenses }}
-          Total income is {{ total_income }}
+    <ul
+      <li>Total expense is {{ total_expenses }}</li>
+      <li>Total income is {{ total_incomes }}</li>
+
+  </ul>
+
+
 
 
     {% for expense in expenses %}

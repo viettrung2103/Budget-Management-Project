@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5da8658d-b6e9-43e3-be78-88dd9c54ddad" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BudgetManage/budget/templates/spendings/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/budget/templates/spendings/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetManage/budget/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/budget/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
