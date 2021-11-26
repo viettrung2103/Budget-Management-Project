@@ -63,6 +63,21 @@ class SpendingListView(ListView):
     model = Spending
     context_object_name = 'spending_list'
 
+    def get_context_data(self,**kwargs):
+        context=super().get_context_data(**kwargs)
+        context['incomes'] = Spending.objects.filter(spendingtype=1)
+        context['expenses'] = Spending.objects.filter(spendingtype=2)
+
+        total_incomes = context['incomes'].aggregate(Sum('amount'))
+        total_expenses = context['expenses'].aggregate(Sum('amount'))
+
+        context['total_incomes'] = total_incomes
+        context['total_expenses'] = total_expenses
+
+
+        return context
+
+
 class SpendingUpdateView(UpdateView):
     template_name = "spendings/create.html"
     model = Spending
