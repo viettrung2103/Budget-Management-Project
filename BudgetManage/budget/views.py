@@ -61,20 +61,12 @@ class SpendingCreateView(CreateView):
 class SpendingListView(ListView):
     template_name = "spendings/list.html"
     model = Spending
-    context_object_name = 'spending_list'
 
     def get_context_data(self,**kwargs):
         context=super().get_context_data(**kwargs)
-        context['incomes'] = Spending.objects.filter(spendingtype=1)
-        context['expenses'] = Spending.objects.filter(spendingtype=2)
-
-        total_incomes = context['incomes'].aggregate(Sum('amount'))
-        total_expenses = context['expenses'].aggregate(Sum('amount'))
-
-
-        context['total_incomes'] = total_incomes
+        context['expenses'] = Spending.objects.all() # get a query of all expenses
+        total_expenses = context['expenses'].aggregate(Sum('amount')) #sum
         context['total_expenses'] = total_expenses
-
 
         return context
 
@@ -90,24 +82,55 @@ class SpendingDeleteView(DeleteView):
     model = Spending
     success_url = reverse_lazy('spending_list')
 
-def totalspending(request):
-    incomes = Spending.objects.filter(spendingtype=1)
-    expenses = Spending.objects.filter(spendingtype=2)
+# def totalspending(request):
+#     incomes = Spending.objects.filter(spendingtype=1)
+#     expenses = Spending.objects.filter(spendingtype=2)
+#
+#     total_incomes= incomes.aggregate(Sum('amount'))
+#     total_expenses= expenses.aggregate(Sum('amount',Value=0))
+#
+#     context = {
+#         'incomes':incomes,
+#         'expenses':expenses,
+#         'total_incomes':total_incomes,
+#         'total_expenses':total_expenses,
+#                }
+#
+#     return render(
+#         request,'spendings/summary.html',context)
 
-    total_incomes= incomes.aggregate(Sum('amount'))
-    total_expenses= expenses.aggregate(Sum('amount',Value=0))
-
-    context = {
-        'incomes':incomes,
-        'expenses':expenses,
-        'total_incomes':total_incomes,
-        'total_expenses':total_expenses,
-               }
-
-    return render(
-        request,'spendings/summary.html',context)
-
+#CRUD for Income
 class IncomeCreateView(CreateView):
-    template_name = "spendings/create.html"
+    template_name = "incomes/create.html"
     form_class = IncomeForm
     success_url = reverse_lazy('success')
+
+class IncomeListView(ListView):
+    template_name = "incomes/list.html"
+    model = Income
+
+    def get_context_data(self,**kwargs):
+        context=super().get_context_data(**kwargs)
+        context['incomes'] = Income.objects.all() # get a query of all expenses
+        total_incomes = context['incomes'].aggregate(Sum('amount')) #summ
+        context['total_income'] = total_incomes
+        return context
+
+class SummaryView(ListView):
+    template_name = "spendings/summary.html"
+    context_object_name = "expenses"
+
+    def get_queryset(self):
+        return Spending.objects.all()
+
+    def get_context_data(self,**kwargs):
+        context=super().get_context_data(**kwargs)
+        context['incomes'] = Income.objects.all()
+        context['expenses'] = Spending.objects.all()
+
+        total_incomes = context['incomes'].aggregate(Sum('amount')) #sumofincomes
+        total_expenses = context['expenses'].aggregate(Sum('amount')) #sumofincomes
+        context['total_incomes'] = total_incomes
+        context['total_expenses'] = total_expenses
+
+        return context

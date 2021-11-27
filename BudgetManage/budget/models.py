@@ -19,11 +19,7 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
-class SpendingType(models.Model):
-    name = CharField(max_length=128)
 
-    def __str__(self):
-        return self.name
 
 class Spending(models.Model):
     name = CharField(max_length=128)

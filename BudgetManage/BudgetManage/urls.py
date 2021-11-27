@@ -20,8 +20,9 @@ from django.views.generic import TemplateView
 from budget.views import(
     MethodListView, MethodCreateView,
     CategoryCreateView, CategoryListView, CategoryDeleteView,CategoryUpdateView,
-    SpendingCreateView, SpendingListView, SpendingUpdateView, SpendingDeleteView,totalspending,
-    IncomeCreateView,
+    SpendingCreateView, SpendingListView, SpendingUpdateView, SpendingDeleteView,
+    IncomeCreateView, IncomeListView,
+    SummaryView,
 )
 
 urlpatterns = [
@@ -44,11 +45,13 @@ urlpatterns = [
     path('budget/spending/update/<pk>/',SpendingUpdateView.as_view(), name='spending_update'),
     path('budget/spending/delete/<pk>/',SpendingDeleteView.as_view(), name='spending_delete'),
     path('budget/spending/delete/<pk>/',SpendingDeleteView.as_view(), name='spending_delete'),
-    path('budget/spending/summary/',totalspending, name='summary'),
+
 
     #Income
     path('budget/income/create/', IncomeCreateView.as_view(), name='income_create'),
+    path('budget/income/list/', IncomeListView.as_view(), name='income_list'),
 
+    path('budget/spendings/summary', SummaryView.as_view(), name='summary'),
 
 
 

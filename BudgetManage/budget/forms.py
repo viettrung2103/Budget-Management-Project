@@ -3,7 +3,7 @@ from django.core.exceptions import ValidationError
 from django.forms import(
     CharField, ModelForm,DateField,DecimalField
 )
-from budget.models import (SavingMethod, Category, SpendingType, Spending, Income,
+from budget.models import (SavingMethod, Category, Spending, Income,
 )
 from datetime import date,datetime
 
@@ -23,18 +23,6 @@ class MethodForm(ModelForm):
 class CategoryForm(ModelForm):
     class Meta:
         model = Category
-        fields = '__all__'
-
-    # Force the first letter of the name to be capitalized
-    def clean_name(self):
-        initial = self.cleaned_data['name']
-        if initial == '':
-            raise ValidationError("You cannot add empty method")
-        return initial.capitalize()
-
-class SpendingTypeForm(ModelForm):
-    class Meta:
-        model = SpendingType
         fields = '__all__'
 
     # Force the first letter of the name to be capitalized
@@ -69,6 +57,13 @@ class IncomeForm(ModelForm):
 
     date = PastandNowField
     amount = DecimalField(min_value=0)
+
+    # Force the first letter of the name to be capitalized
+    def clean_name(self):
+        initial = self.cleaned_data['name']
+        if initial == '':
+            raise ValidationError("You cannot add empty method")
+        return initial.capitalize()
 
 
 

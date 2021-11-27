@@ -1,12 +1,21 @@
 {% extends "base.html" %}
-
 {% block content %}
+  <h1>Welcome to Budget Plan!</h1>
+  <ul>
+    {% for income in incomes %}
+      <li>
 
-    <form method="post">
-        {% csrf_token %}
+        {{ income.pk }}
+        {{ income.name }}
+        {{ income.amount }}
+        {{ income.date }}
 
-        <table>{{ form }}</table>
-        <input type="submit" value="Submit" class="btn btn-primary">
-    </form>
+      </li>
+    {% endfor %}
+      <ul>
+        <li>Total expense is {{ total_income.amount__sum|floatformat:2 }}</li>
+        
+      </ul>
+  </ul>
 
 {% endblock %}
