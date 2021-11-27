@@ -14,7 +14,8 @@
         <li>Total expense is {{ total_expenses.amount__sum|floatformat:2 }}</li>
       </ul>
   </ul>
- {% for income in incomes %}
+  <ul>
+    {% for income in incomes %}
       <li>
         {{ income.pk }}
         {{ income.name }}
@@ -24,6 +25,10 @@
     {% endfor %}
       <ul>
         <li>Total incomes is {{ total_incomes.amount__sum|floatformat:2 }}</li>
+      </ul>
+    Saving is {{ saving|floatformat:2  }}
+  </ul>
+
 
 
 {% endblock %}
