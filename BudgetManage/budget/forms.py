@@ -3,8 +3,8 @@ from django.core.exceptions import ValidationError
 from django.forms import(
     CharField, ModelForm,DateField,DecimalField
 )
-from budget.models import SavingMethod, Category, SpendingType, Spending
-
+from budget.models import (SavingMethod, Category, SpendingType, Spending, Income,
+)
 from datetime import date,datetime
 
 class MethodForm(ModelForm):
@@ -60,6 +60,14 @@ class SpendingForm(ModelForm):
         fields = '__all__'
 
     date = PastandNowField()
+    amount = DecimalField(min_value=0)
+
+class IncomeForm(ModelForm):
+    class Meta:
+        model = Income
+        fields = '__all__'
+
+    date = PastandNowField
     amount = DecimalField(min_value=0)
 
 

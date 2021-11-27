@@ -1,8 +1,10 @@
 from django.db import models
-from django.db.models import (CharField,IntegerField, ForeignKey, DecimalField, DateField,TextField,DateTimeField
+from django.db.models import (CharField,IntegerField, ForeignKey, DecimalField, DateField,TextField,
+                              DateTimeField,TextChoices
 )
 import datetime
 from django.forms.widgets import SelectDateWidget
+from django.utils.translation import gettext_lazy as _
 # Create your models here.
 class SavingMethod(models.Model):
     name = CharField(max_length=128)
@@ -25,9 +27,30 @@ class SpendingType(models.Model):
 
 class Spending(models.Model):
     name = CharField(max_length=128)
-    spendingtype = ForeignKey(SpendingType,null=True, on_delete=models.CASCADE)
     amount = DecimalField(max_digits=8,decimal_places=2)
     category = ForeignKey(Category, null=True,on_delete=models.DO_NOTHING)
+    date = DateField(default=datetime.date.today)# date field , default is today
+    description = TextField()
+
+    def __str__(self):
+        return self.name
+
+class Income(models.Model):
+
+    class IncomeType(models.TextChoices):
+        NONE = '',_('Type of Income')
+        SALARY = 'Salary',_('Salary')
+        DIVIDEND = 'Dividend',_('Dividend')
+        EXTRA = 'Extra',_('Extra')
+        BUSINESS = 'Business',_('Business')
+
+    name = CharField(max_length=128)
+    amount = DecimalField(max_digits=8,decimal_places=2)
+    category = CharField(
+        max_length=8,
+        choices=IncomeType.choices,
+        default=None,
+    )
     date = DateField(default=datetime.date.today)# date field , default is today
     description = TextField()
 

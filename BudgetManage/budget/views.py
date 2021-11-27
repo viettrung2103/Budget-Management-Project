@@ -4,9 +4,9 @@ from django.urls import reverse_lazy
 from django.views.generic import CreateView,ListView,UpdateView,DetailView,DeleteView
 from django.db.models import Sum
 
-from budget.forms import MethodForm, CategoryForm, SpendingForm
+from budget.forms import MethodForm, CategoryForm, SpendingForm, IncomeForm
 
-from budget.models import SavingMethod, Category, Spending
+from budget.models import SavingMethod, Category, Spending, Income
 
 from logging import getLogger
 
@@ -71,6 +71,7 @@ class SpendingListView(ListView):
         total_incomes = context['incomes'].aggregate(Sum('amount'))
         total_expenses = context['expenses'].aggregate(Sum('amount'))
 
+
         context['total_incomes'] = total_incomes
         context['total_expenses'] = total_expenses
 
@@ -96,14 +97,17 @@ def totalspending(request):
     total_incomes= incomes.aggregate(Sum('amount'))
     total_expenses= expenses.aggregate(Sum('amount',Value=0))
 
-
     context = {
         'incomes':incomes,
         'expenses':expenses,
         'total_incomes':total_incomes,
         'total_expenses':total_expenses,
-
                }
 
     return render(
         request,'spendings/summary.html',context)
+
+class IncomeCreateView(CreateView):
+    template_name = "spendings/create.html"
+    form_class = IncomeForm
+    success_url = reverse_lazy('success')
