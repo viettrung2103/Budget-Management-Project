@@ -28,13 +28,13 @@ class MethodListView(ListView):
 class MethodCreateView(CreateView):
     template_name = "create.html"
     form_class = MethodForm
-    success_url = reverse_lazy("success")
+    success_url = reverse_lazy("summary")
 
 ##CRUD for Category:
 class CategoryCreateView(CreateView):
     template_name = "categories/create.html"
     form_class = CategoryForm
-    success_url = reverse_lazy('success')
+    success_url = reverse_lazy('summary')
 
 class CategoryListView(ListView):
     template_name = "categories/list.html"
@@ -44,19 +44,19 @@ class CategoryListView(ListView):
 class CategoryDeleteView(DeleteView):
     template_name = 'categories/confirm_delete.html'
     model = Category
-    success_url = reverse_lazy('category_list')
+    success_url = reverse_lazy('summary')
 
 class CategoryUpdateView(UpdateView):
     template_name = "categories/create.html"
     model = Category
     form_class = CategoryForm
-    success_url = reverse_lazy("category_list")
+    success_url = reverse_lazy("summary")
 
 #CRUD for Spending:
 class SpendingCreateView(CreateView):
     template_name = "spendings/create.html"
     form_class = SpendingForm
-    success_url = reverse_lazy('success')
+    success_url = reverse_lazy('summary')
 
 class SpendingListView(ListView):
     template_name = "spendings/list.html"
@@ -69,7 +69,6 @@ class SpendingListView(ListView):
         context['total_expenses'] = total_expenses
 
         return context
-
 
 class SpendingUpdateView(UpdateView):
     template_name = "spendings/create.html"
