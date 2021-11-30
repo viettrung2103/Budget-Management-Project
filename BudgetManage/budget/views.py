@@ -81,23 +81,6 @@ class SpendingDeleteView(DeleteView):
     model = Spending
     success_url = reverse_lazy('summary')
 
-# def totalspending(request):
-#     incomes = Spending.objects.filter(spendingtype=1)
-#     expenses = Spending.objects.filter(spendingtype=2)
-#
-#     total_incomes= incomes.aggregate(Sum('amount'))
-#     total_expenses= expenses.aggregate(Sum('amount',Value=0))
-#
-#     context = {
-#         'incomes':incomes,
-#         'expenses':expenses,
-#         'total_incomes':total_incomes,
-#         'total_expenses':total_expenses,
-#                }
-#
-#     return render(
-#         request,'spendings/summary.html',context)
-
 #CRUD for Income
 class IncomeCreateView(CreateView):
     template_name = "incomes/create.html"
@@ -127,6 +110,7 @@ class IncomeDeleteView(DeleteView):
     success_url = reverse_lazy('summary')
 
 
+#This View will show the summary of the Budget
 class SummaryView(ListView):
     template_name = "spendings/summary.html"
     context_object_name = "expenses"
@@ -142,8 +126,8 @@ class SummaryView(ListView):
         total_incomes = context['incomes'].aggregate(Sum('amount')) #sumofincomes
         total_expenses = context['expenses'].aggregate(Sum('amount')) #sumofincomes
         saving = total_incomes['amount__sum']-total_expenses['amount__sum'] #total incomes - total expense
-        print(total_expenses['amount__sum'])
+
         context['total_incomes'] = total_incomes
         context['total_expenses'] = total_expenses
-        context['saving'] = saving
+        context['saving'] = saving  #
         return context

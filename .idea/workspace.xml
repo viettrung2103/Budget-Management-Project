@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5da8658d-b6e9-43e3-be78-88dd9c54ddad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BudgetManage/budgetplanning/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetManage/BudgetManage/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/BudgetManage/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetManage/BudgetManage/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/BudgetManage/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetManage/budget/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/budget/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetManage/budget/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/budget/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetManage/budget/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/budget/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetManage/budget/templates/categories/confirm_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/budget/templates/categories/confirm_delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetManage/budget/templates/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/BudgetManage/budget/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/budget/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetManage/budgetplanning/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/budgetplanning/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetManage/budgetplanning/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/budgetplanning/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetManage/budgetplanning/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/budgetplanning/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BudgetManage/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +110,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/BudgetManage/budget/views.py</url>
-          <line>123</line>
+          <line>106</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">

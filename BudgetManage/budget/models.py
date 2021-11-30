@@ -19,12 +19,10 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
-
-
 class Spending(models.Model):
     name = CharField(max_length=128)
     amount = DecimalField(max_digits=8,decimal_places=2)
-    category = ForeignKey(Category, null=True,on_delete=models.DO_NOTHING)
+    category = ForeignKey(Category,related_name='spendings', null=True,on_delete=models.DO_NOTHING)
     date = DateField(default=datetime.date.today)# date field , default is today
     description = TextField()
 

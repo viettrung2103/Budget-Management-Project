@@ -47,7 +47,7 @@ class SpendingForm(ModelForm):
         model = Spending
         fields = '__all__'
 
-    date = PastandNowField()
+    date = PastandNowField
     amount = DecimalField(min_value=0)
 
 class IncomeForm(ModelForm):

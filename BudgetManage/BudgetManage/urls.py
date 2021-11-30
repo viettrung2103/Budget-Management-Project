@@ -18,6 +18,7 @@ from django.urls import path
 from django.views.generic import TemplateView
 
 from budget.views import(
+    base,
     MethodListView, MethodCreateView,
     CategoryCreateView, CategoryListView, CategoryDeleteView,CategoryUpdateView,
     SpendingCreateView, SpendingListView, SpendingUpdateView, SpendingDeleteView,
@@ -28,6 +29,8 @@ from budget.views import(
 urlpatterns = [
     #admin
     path('admin/', admin.site.urls),
+    #Base
+    path('', base, name='index'),
     #savingmethod
     path('budget/methods/create/', MethodCreateView.as_view(), name='method_create'),
     path('budget/methods/list/', MethodListView.as_view(), name='method_list'),
