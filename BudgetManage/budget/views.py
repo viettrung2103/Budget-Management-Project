@@ -129,6 +129,7 @@ class RecordDetailView(DetailView):
     model = Record
     context_object_name = 'record'
 
+
 class RecordUpdateView(UpdateView):
     template_name = "records/create.html"
     model = Record

@@ -5,6 +5,13 @@
 <p>Name: {{record.name}}</p>
 <p>Active: {{record.is_active}}</p>
 <p>Time: {{record.creation_date|date:"F Y"}}</p>
+<p>Income:
+    <a class="btn btn-primary" href="{% url 'income_create' %}" role="button">Add Income</a>
+</p>
 
+<p>Spending:
+    <a class="btn btn-primary" href="{% url 'spending_create' %}" role="button">Add Spending</a>
+</p>
+<a class="btn btn-secondary" href="{% url 'summary' %}" role="button">Summary</a>
 
 {% endblock %}
