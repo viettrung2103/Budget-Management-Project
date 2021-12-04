@@ -10,7 +10,7 @@ from django.utils.translation import gettext_lazy as _
 
 
 class Record(models.Model):
-    name = CharField(max_length=128,null = True,)
+    name = CharField(max_length=128, null=True)
     user = ForeignKey(Profile,on_delete=models.CASCADE)
     is_active = models.BooleanField(default=True)
     creation_date = models.DateTimeField(auto_now=True)

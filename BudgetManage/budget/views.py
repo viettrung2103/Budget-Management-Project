@@ -110,10 +110,20 @@ class IncomeDeleteView(DeleteView):
     success_url = reverse_lazy('summary')
 
 #CRUD for Record
-class BudgetCreateView(CreateView):
+class RecordCreateView(CreateView):
     template_name = "records/create.html"
-    form_class = Record
+    form_class = RecordForm
     success_url = reverse_lazy('summary')
+
+class RecordListview(ListView):
+    template_name = "records/list.html"
+    model = Record
+    context_object_name = "records"
+
+    def get_queryset(self):
+        records=super().get_queryset() #original record
+        return records.filter(user=request.user) # return record from request user
+
 
 
 #This View will show the summary of the Budget
