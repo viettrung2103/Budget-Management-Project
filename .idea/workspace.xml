@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5da8658d-b6e9-43e3-be78-88dd9c54ddad" name="Default Changelist" comment="add Profile models and add SignUpView">
-      <change beforePath="$PROJECT_DIR$/BudgetManage/budget/templates/records/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/budget/templates/records/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetManage/budget/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/budget/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetManage/budget/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/budget/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
