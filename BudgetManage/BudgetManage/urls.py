@@ -36,28 +36,27 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     #Base
     path('', base, name='index'),
-    #savingmethod
+    #Savingmethod
     path('budget/methods/create/', MethodCreateView.as_view(), name='method_create'),
     path('budget/methods/list/', MethodListView.as_view(), name='method_list'),
-    #categories
+    #Categories
     path('budget/category/create/', CategoryCreateView.as_view(), name='category_create'),
     path('budget/category/list/', CategoryListView.as_view(), name='category_list'),
     path('budget/category/delete/<pk>/', CategoryDeleteView.as_view(), name='category_delete'),
     path('budget/category/update/<pk>/', CategoryUpdateView.as_view(), name='category_update'),
     #Budget
 
+
     #Spending
     path('budget/spending/create/',SpendingCreateView.as_view(), name='spending_create'),
     path('budget/spending/list/',SpendingListView.as_view(), name='spending_list'),
     path('budget/spending/update/<pk>/',SpendingUpdateView.as_view(), name='spending_update'),
     path('budget/spending/delete/<pk>/',SpendingDeleteView.as_view(), name='spending_delete'),
-
     #Income
     path('budget/income/create/', IncomeCreateView.as_view(), name='income_create'),
     path('budget/income/list/', IncomeListView.as_view(), name='income_list'),
     path('budget/income/delete/<pk>/', IncomeDeleteView.as_view(), name='income_delete'),
     path('budget/income/update/<pk>/', IncomeUpdateView.as_view(), name='income_update'),
-
     #Summary
     path('budget/spendings/summary', SummaryView.as_view(), name='summary'),
 

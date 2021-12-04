@@ -10,4 +10,4 @@ class Profile(Model):
     goal = TextField()
 
     def __str__(self):
-        return self.user
+        return self.user.username

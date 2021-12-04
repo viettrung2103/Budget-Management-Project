@@ -131,3 +131,4 @@ class SummaryView(ListView):
         context['total_expenses'] = total_expenses
         context['saving'] = saving  #
         return context
+

@@ -11,11 +11,11 @@ class SignUpForm(UserCreationForm):
         fields = ['username', 'first_name', 'email']
 
     goal = CharField(
-        label='What is your goal for saving', widget=Textarea, min_length=40
+        label='What is your goal for saving', widget=Textarea
     )
 
     def save(self, commit=True):
-        self.instance.is_active = False
+        self.instance.is_active = True
         new_user = super().save(commit)
 
         # We should assign Customers group permission
