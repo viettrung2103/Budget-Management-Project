@@ -25,6 +25,7 @@ from budget.views import(
     CategoryCreateView, CategoryListView, CategoryDeleteView,CategoryUpdateView,
     SpendingCreateView, SpendingListView, SpendingUpdateView, SpendingDeleteView,
     IncomeCreateView, IncomeListView, IncomeUpdateView, IncomeDeleteView,
+    
     SummaryView,
 )
 from users.views import(

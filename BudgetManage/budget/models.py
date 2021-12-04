@@ -9,7 +9,7 @@ from django.utils.translation import gettext_lazy as _
 # Create your models here.
 
 
-class Budget(models.Model):
+class Record(models.Model):
     name = CharField(max_length=128,null = True,)
     user = ForeignKey(Profile,on_delete=models.CASCADE)
     is_active = models.BooleanField(default=True)
@@ -37,7 +37,7 @@ class Spending(models.Model):
     category = ForeignKey(Category,related_name='spendings', null=True,on_delete=models.DO_NOTHING)
     date = DateField(default=datetime.date.today)# date field , default is today
     description = TextField()
-    budget = ForeignKey(Budget,on_delete=models.CASCADE,null=True)
+    record = ForeignKey(Record,on_delete=models.CASCADE,null=True)
 
     def __str__(self):
         return self.name
@@ -60,7 +60,7 @@ class Income(models.Model):
     )
     date = DateField(default=datetime.date.today)# date field , default is today
     description = TextField()
-    budget = ForeignKey(Budget, on_delete=models.CASCADE, null=True)
+    record = ForeignKey(Record, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return self.name

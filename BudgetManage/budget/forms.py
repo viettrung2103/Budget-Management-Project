@@ -3,7 +3,7 @@ from django.core.exceptions import ValidationError
 from django.forms import(
     CharField, ModelForm,DateField,DecimalField
 )
-from budget.models import (SavingMethod, Category, Spending, Income,
+from budget.models import (SavingMethod, Category, Spending, Income, Record
 )
 from datetime import date,datetime
 
@@ -65,5 +65,8 @@ class IncomeForm(ModelForm):
             raise ValidationError("You cannot add empty method")
         return initial.capitalize()
 
-
+class RecordForm(ModelForm):
+    class Meta:
+        model = Record
+        fields = '__all__'
 

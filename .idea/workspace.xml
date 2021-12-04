@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5da8658d-b6e9-43e3-be78-88dd9c54ddad" name="Default Changelist" comment="add Profile models and add SignUpView">
+      <change afterPath="$PROJECT_DIR$/BudgetManage/budget/templates/records/create.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BudgetManage/BudgetManage/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/BudgetManage/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetManage/BudgetManage/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/BudgetManage/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BudgetManage/budget/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/budget/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetManage/budget/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/budget/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BudgetManage/budget/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/budget/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BudgetManage/budget/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/budget/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BudgetManage/budget/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/budget/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BudgetManage/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetManage/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/users/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetManage/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/users/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,6 +144,11 @@
           <url>file://$PROJECT_DIR$/BudgetManage/BudgetManage/urls.py</url>
           <line>58</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/BudgetManage/budget/views.py</url>
+          <line>60</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

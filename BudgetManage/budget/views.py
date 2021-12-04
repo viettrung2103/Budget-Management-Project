@@ -4,9 +4,9 @@ from django.urls import reverse_lazy
 from django.views.generic import CreateView,ListView,UpdateView,DetailView,DeleteView
 from django.db.models import Sum
 
-from budget.forms import MethodForm, CategoryForm, SpendingForm, IncomeForm
+from budget.forms import MethodForm, CategoryForm, SpendingForm, IncomeForm, RecordForm
 
-from budget.models import SavingMethod, Category, Spending, Income
+from budget.models import SavingMethod, Category, Spending, Income, Record
 
 from logging import getLogger
 
@@ -107,6 +107,12 @@ class IncomeUpdateView(UpdateView):
 class IncomeDeleteView(DeleteView):
     template_name = 'incomes/confirm_delete.html'
     model = Income
+    success_url = reverse_lazy('summary')
+
+#CRUD for Record
+class BudgetCreateView(CreateView):
+    template_name = "records/create.html"
+    form_class = Record
     success_url = reverse_lazy('summary')
 
 
