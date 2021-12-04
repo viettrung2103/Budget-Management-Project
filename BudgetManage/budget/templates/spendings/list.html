@@ -9,6 +9,8 @@
         {{ expense.name }}
         {{ expense.amount }}
         {{ expense.date }}
+        <a class="btn btn-success" href="{% url 'spending_update' expense.pk %}" role="button"> Update</a>
+        <a class="btn btn-danger" href="{% url 'spending_delete' expense.pk %}" role="button"> Delete</a>
       </li>
     {% endfor %}
       <ul>

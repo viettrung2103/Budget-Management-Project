@@ -5,16 +5,12 @@
     <a class="btn btn-secondary" href="{% url 'record_create' %}" role="button">Create</a>
     {% for record in records %}
       <li>
-
         {{ record.pk }}
         {{ record.name }}
         {{ record.creation_date|date:"F Y" }}
-
-
         <a class="btn btn-primary" href="{% url 'record_detail' record.pk %}" role="button"> Detail</a>
         <a class="btn btn-success" href="{% url 'record_update' record.pk %}" role="button"> Update</a>
         <a class="btn btn-danger" href="{% url 'record_delete' record.pk %}" role="button"> Delete</a>
-
       </li>
     {% endfor %}
 
