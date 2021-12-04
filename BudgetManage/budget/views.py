@@ -120,9 +120,9 @@ class RecordListview(ListView):
     model = Record
     context_object_name = "records"
 
-    def get_queryset(self):
-        records=super().get_queryset() #original record
-        return records.filter(user=request.user) # return record from request user
+    # def get_queryset(self):
+    #     records=super().get_queryset() #original record
+    #     return records.filter(user=self.user) # return record from request user
 
 
 

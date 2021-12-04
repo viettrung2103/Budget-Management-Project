@@ -2,19 +2,18 @@
 {% block content %}
   <h1>Welcome to Budget Plan!</h1>
   <ul>
+
     {% for record in records %}
       <li>
 
         {{ record.pk }}
-        {{ income.name }}
-        {{ income.creation_date }}
+        {{ record.name }}
+        {{ record.creation_date }}
+        <a class="btn btn-primary" href="{% url 'summary' %}" role="button"> Summary</a>
 
       </li>
     {% endfor %}
-      <ul>
-        <li>Total expense is {{ total_income.amount__sum|floatformat:2 }}</li>
-        
-      </ul>
+
   </ul>
 
 {% endblock %}
