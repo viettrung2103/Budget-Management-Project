@@ -7,4 +7,7 @@ from django.db.models import Model, OneToOneField, CASCADE, TextField, ForeignKe
 
 class Profile(Model):
     user = OneToOneField(User, on_delete=CASCADE)
-    biography = TextField()
+    goal = TextField()
+
+    def __str__(self):
+        return self.user

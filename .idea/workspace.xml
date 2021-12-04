@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5da8658d-b6e9-43e3-be78-88dd9c54ddad" name="Default Changelist" comment="add Profile models and add SignUpView">
-      <change afterPath="$PROJECT_DIR$/BudgetManage/users/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetManage/users/templates/registration/logged_out.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetManage/users/templates/registration/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetManage/BudgetManage/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/BudgetManage/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BudgetManage/BudgetManage/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/BudgetManage/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetManage/budget/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/budget/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BudgetManage/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetManage/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/users/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetManage/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetManage/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -125,6 +129,16 @@
           <url>file://$PROJECT_DIR$/BudgetManage/budget/views.py</url>
           <line>48</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/BudgetManage/users/forms.py</url>
+          <line>7</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/BudgetManage/users/views.py</url>
+          <line>19</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

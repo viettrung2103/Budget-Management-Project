@@ -19,7 +19,7 @@ class SignUpForm(UserCreationForm):
         new_user = super().save(commit)
 
         # We should assign Customers group permission
-        
+
         goal = self.cleaned_data['goal']
         profile = Profile(goal=goal, user=new_user)
         if commit:

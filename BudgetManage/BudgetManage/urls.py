@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from BudgetManage import settings
 from django.views.generic import TemplateView
+from django.contrib.auth.views import LoginView, LogoutView
 
 from budget.views import(
     base,
@@ -61,6 +63,10 @@ urlpatterns = [
 
     #Users App
     path('users/sign-up/', SignUpView.as_view(), name='sign_up'),
+    path('users/sign-in/', LoginView.as_view(), name='login'),
+    path('logout/', LogoutView.as_view(), name='logout'),
+
+
 
 
     path('success/',TemplateView.as_view(template_name='success.html'), name='success'),
