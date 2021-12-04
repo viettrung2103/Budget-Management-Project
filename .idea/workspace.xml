@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5da8658d-b6e9-43e3-be78-88dd9c54ddad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BudgetManage/users/templates/signup.html" afterDir="false" />
+    <list default="true" id="5da8658d-b6e9-43e3-be78-88dd9c54ddad" name="Default Changelist" comment="add Profile models and add SignUpView">
+      <change afterPath="$PROJECT_DIR$/BudgetManage/users/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetManage/BudgetManage/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/BudgetManage/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetManage/BudgetManage/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/BudgetManage/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BudgetManage/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -14,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -85,6 +87,14 @@
       <option name="presentableId" value="Default" />
       <updated>1636875250553</updated>
     </task>
+    <task id="LOCAL-00001" summary="add Profile models and add SignUpView">
+      <created>1638599778831</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1638599778831</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -98,6 +108,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add Profile models and add SignUpView" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Profile models and add SignUpView" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

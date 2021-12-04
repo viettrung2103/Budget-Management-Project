@@ -25,6 +25,9 @@ from budget.views import(
     IncomeCreateView, IncomeListView, IncomeUpdateView, IncomeDeleteView,
     SummaryView,
 )
+from users.views import(
+    SignUpView,
+)
 
 urlpatterns = [
     #admin
@@ -56,6 +59,8 @@ urlpatterns = [
     #Summary
     path('budget/spendings/summary', SummaryView.as_view(), name='summary'),
 
+    #Users App
+    path('users/sign-up/', SignUpView.as_view(), name='sign_up'),
 
 
     path('success/',TemplateView.as_view(template_name='success.html'), name='success'),
