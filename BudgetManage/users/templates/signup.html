@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Signup</title>
-</head>
-<body>
 
+{% extends "base.html" %}
+{% block content %}
+  <h1>First Step in your Budget Plan</h1>
     <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
@@ -13,7 +9,4 @@
         <button type="reset" class="btn btn-primary">Clear</button>
     </form>
 
-
-
-</body>
-</html>
+{% endblock %}
