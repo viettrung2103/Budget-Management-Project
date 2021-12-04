@@ -65,7 +65,7 @@ class SpendingListView(ListView):
     def get_context_data(self,**kwargs):
         context=super().get_context_data(**kwargs)
         context['expenses'] = Spending.objects.all() # get a query of all expenses
-        total_expenses = context['expenses'].aggregate(Sum('amount')) #sum
+        total_expenses = context['expenses'].aggregate(Sum('amount'))  #sum
         context['total_expenses'] = total_expenses
 
         return context
@@ -113,7 +113,7 @@ class IncomeDeleteView(DeleteView):
 class RecordCreateView(CreateView):
     template_name = "records/create.html"
     form_class = RecordForm
-    success_url = reverse_lazy('summary')
+    success_url = reverse_lazy('record_list')
 
 class RecordListview(ListView):
     template_name = "records/list.html"
@@ -124,6 +124,21 @@ class RecordListview(ListView):
     #     records=super().get_queryset() #original record
     #     return records.filter(user=self.user) # return record from request user
 
+class RecordDetailView(DetailView):
+    template_name = "records/detail.html"
+    model = Record
+    context_object_name = 'record'
+
+class RecordUpdateView(UpdateView):
+    template_name = "records/create.html"
+    model = Record
+    form_class = RecordForm
+    success_url = reverse_lazy("record_list")
+
+class RecordDeleteView(DeleteView):
+    template_name = 'records/confirm_delete.html'
+    model = Record
+    success_url = reverse_lazy('record_list')
 
 
 #This View will show the summary of the Budget
@@ -141,7 +156,7 @@ class SummaryView(ListView):
 
         total_incomes = context['incomes'].aggregate(Sum('amount')) #sumofincomes
         total_expenses = context['expenses'].aggregate(Sum('amount')) #sumofincomes
-        saving = total_incomes['amount__sum']-total_expenses['amount__sum'] #total incomes - total expense
+        saving = total_incomes['amount__sum'] - total_expenses['amount__sum'] #total incomes - total expense
 
         context['total_incomes'] = total_incomes
         context['total_expenses'] = total_expenses

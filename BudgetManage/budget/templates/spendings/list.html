@@ -1,15 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
-  <h1>Welcome to Budget Plan!</h1>
+  <h1>Welcome to Spending List!</h1>
   <ul>
+    <a class="btn btn-secondary" href="{% url 'spending_create' %}" role="button">Create</a>
     {% for expense in expenses %}
       <li>
-
         {{ expense.pk }}
         {{ expense.name }}
         {{ expense.amount }}
         {{ expense.date }}
-
       </li>
     {% endfor %}
       <ul>

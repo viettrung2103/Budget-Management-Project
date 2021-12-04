@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5da8658d-b6e9-43e3-be78-88dd9c54ddad" name="Default Changelist" comment="add Profile models and add SignUpView">
+      <change afterPath="$PROJECT_DIR$/BudgetManage/budget/templates/records/confirm_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetManage/budget/templates/records/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetManage/budget/templates/records/update.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetManage/BudgetManage/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/BudgetManage/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetManage/budget/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/budget/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetManage/budget/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/budget/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetManage/budget/templates/incomes/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/budget/templates/incomes/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BudgetManage/budget/templates/records/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/budget/templates/records/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetManage/budget/templates/spendings/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/budget/templates/spendings/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetManage/budget/templates/spendings/summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/budget/templates/spendings/summary.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BudgetManage/budget/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/budget/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetManage/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetManage/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,11 +124,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/BudgetManage/budget/views.py</url>
-          <line>106</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/BudgetManage/budget/views.py</url>
           <line>48</line>

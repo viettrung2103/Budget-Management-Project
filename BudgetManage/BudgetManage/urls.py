@@ -25,7 +25,7 @@ from budget.views import(
     CategoryCreateView, CategoryListView, CategoryDeleteView,CategoryUpdateView,
     SpendingCreateView, SpendingListView, SpendingUpdateView, SpendingDeleteView,
     IncomeCreateView, IncomeListView, IncomeUpdateView, IncomeDeleteView,
-    RecordCreateView, RecordListview,
+    RecordCreateView, RecordListview, RecordDetailView, RecordUpdateView, RecordDeleteView,
     SummaryView,
 )
 from users.views import(
@@ -48,7 +48,9 @@ urlpatterns = [
     #Record
     path('budget/records/create/', RecordCreateView.as_view(), name='record_create'),
     path('budget/records/list/', RecordListview.as_view(), name='record_list'),
-
+    path('budget/records/<pk>/', RecordDetailView.as_view(), name='record_detail'),
+    path('budget/records/<pk>/update', RecordUpdateView.as_view(), name='record_update'),
+    path('budget/records/<pk>/delete', RecordDeleteView.as_view(), name='record_delete'),
 
     #Spending
     path('budget/spending/create/',SpendingCreateView.as_view(), name='spending_create'),

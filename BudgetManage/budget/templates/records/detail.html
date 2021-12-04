@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<p>Name: {{record.name}}</p>
+<p>Active: {{record.is_active}}</p>
+<p>Time: {{record.creation_date|date:"F Y"}}</p>
+
+
+{% endblock %}

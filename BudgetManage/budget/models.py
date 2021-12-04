@@ -11,7 +11,7 @@ from django.utils.translation import gettext_lazy as _
 
 class Record(models.Model):
     name = CharField(max_length=128, null=True)
-    user = ForeignKey(Profile,on_delete=models.CASCADE)
+    user = ForeignKey(Profile,on_delete=models.CASCADE,related_name='record')
     is_active = models.BooleanField(default=True)
     creation_date = models.DateTimeField(auto_now=True)
 
@@ -34,10 +34,10 @@ class Category(models.Model):
 class Spending(models.Model):
     name = CharField(max_length=128)
     amount = DecimalField(max_digits=8,decimal_places=2)
-    category = ForeignKey(Category,related_name='spendings', null=True,on_delete=models.DO_NOTHING)
+    category = ForeignKey(Category,related_name='spending', null=True,on_delete=models.DO_NOTHING)
     date = DateField(default=datetime.date.today)# date field , default is today
     description = TextField()
-    record = ForeignKey(Record,on_delete=models.CASCADE,null=True)
+    record = ForeignKey(Record,on_delete=models.CASCADE,null=True,related_name='spending')
 
     def __str__(self):
         return self.name
@@ -60,7 +60,7 @@ class Income(models.Model):
     )
     date = DateField(default=datetime.date.today)# date field , default is today
     description = TextField()
-    record = ForeignKey(Record, on_delete=models.CASCADE, null=True)
+    record = ForeignKey(Record, on_delete=models.CASCADE, null=True,related_name='income')
 
     def __str__(self):
         return self.name
