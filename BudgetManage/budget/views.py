@@ -120,14 +120,29 @@ class RecordListview(ListView):
     model = Record
     context_object_name = "records"
 
-    # def get_queryset(self):
-    #     records=super().get_queryset() #original record
-    #     return records.filter(user=self.user) # return record from request user
+    def get_queryset(self):
+        return Record.objects.filter(user=self.request.user.profile)
+
 
 class RecordDetailView(DetailView):
     template_name = "records/detail.html"
     model = Record
     context_object_name = 'record'
+
+    def get_context_data(self, **kwargs):
+        pk = self.kwargs['pk'] # this is to get querry parameter
+        # print(f' This is {pk}')
+        # x = self.request.GET.get('x')# this is to get a query set
+        # print(f' This is {x}')
+        context = super().get_context_data(**kwargs)
+        context['incomes'] = Income.objects.filter(record__id = pk)
+        context['expenses'] = Spending.objects.filter(record__id = pk)
+        records = Record.objects.filter(user=self.request.user.profile) # to get all the records from logged-in user
+        profile = self.request.user.profile
+        records = profile.records
+
+        return context
+
 
 
 class RecordUpdateView(UpdateView):

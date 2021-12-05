@@ -9,6 +9,16 @@
     <a class="btn btn-primary" href="{% url 'income_create' %}" role="button">Add Income</a>
 </p>
 
+{% for income in incomes %}
+      <li>
+        {{ income.pk }}
+        {{ income.name }}
+        {{ income.amount }}
+        {{ income.date }}
+        <a class="btn btn-success" href="{% url 'income_update' income.pk %}" role="button"> Update</a>
+        <a class="btn btn-danger" href="{% url 'income_delete' income.pk %}" role="button"> Delete</a>
+{% endfor %}
+
 <p>Spending:
     <a class="btn btn-primary" href="{% url 'spending_create' %}" role="button">Add Spending</a>
 </p>

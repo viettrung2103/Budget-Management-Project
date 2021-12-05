@@ -48,7 +48,7 @@ urlpatterns = [
     #Record
     path('budget/records/create/', RecordCreateView.as_view(), name='record_create'),
     path('budget/records/list/', RecordListview.as_view(), name='record_list'),
-    path('budget/records/<pk>/', RecordDetailView.as_view(), name='record_detail'),
+    path('budget/records/<int:pk>/', RecordDetailView.as_view(), name='record_detail'),
     path('budget/records/<pk>/update', RecordUpdateView.as_view(), name='record_update'),
     path('budget/records/<pk>/delete', RecordDeleteView.as_view(), name='record_delete'),
 
